@@ -174,6 +174,7 @@ if (isset($_GET['new']))
 	{
 		mysql_query("INSERT INTO `accounts` (`login`, `mdp`, `points`, `level`, `lastUpdate`) VALUES ('$NEW_login', '$NEW_mdp', 2, 1, '$dateActuel')");
 	}
+    $_SESSION['compte'] = $NEW_login;
 }
 if (isset($_GET['login']))
 {
